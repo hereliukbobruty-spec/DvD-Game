@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first site</title>
+    <style>
+        /* Make the viewport match the window and hide scrollbars so the text bounces cleanly */
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: #f7f7f7;
+        }
+        /* HUD */
+        #hud {
+            position: fixed;
+            left: 12px;
+            top: 12px;
+            z-index: 9999;
+            font-family: Arial, sans-serif;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        #hud .panel {
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            padding: 8px 10px;
+            border-radius: 6px;
+            min-width: 80px;
+            text-align: center;
+        }
+        #startBtn {
+            background: #28a745;
+            border: none;
+            color: white;
+            padding: 8px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        #overlayMessage {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.8);
+            color: #fff;
+            padding: 18px 22px;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            z-index: 10000;
+            display: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="hud">
+        <div class="panel">Score: <span id="score">0</span></div>
+        <div class="panel">Time: <span id="time">30</span>s</div>
+        <button id="startBtn">Start Game</button>
+    </div>
+
+    <div id="overlayMessage"></div>
+
+    <h1 id="myElement">Hello, World!</h1>
+    <script src="Script.js"></script>
+</body>
+
+</html>
